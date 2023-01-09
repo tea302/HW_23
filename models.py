@@ -5,7 +5,7 @@ VALID_CMD_COMMANDS = ('filter', 'unique', 'map', 'limit', 'sort')
 
 class RequestSchema(Schema):
     cmd = fields.Str(required=True)
-    value1 = fields.Str()
+    value = fields.Str()
 
     @validates_schema
     def check_all_cmd_valid(self, values: dict[str, str], *args, **kwargs):
